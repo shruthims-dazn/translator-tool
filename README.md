@@ -5,10 +5,13 @@ A small, dependency-free web translator for English and Korean.
 ## Run
 
 ```sh
-python3 translator/server.py
+cd translator
+python3 server.py
 ```
 
 Open http://127.0.0.1:8790.
+
+For first-time setup on a new laptop, see [setup.md](setup.md).
 
 ## Features
 
