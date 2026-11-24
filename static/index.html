@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>English–Korean Translator</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header>
+        <p class="eyebrow">LANGUAGE TOOL</p>
+        <h1>English <span aria-hidden="true">↔</span> Korean</h1>
+      </header>
+
+      <section class="translator" aria-label="Translation tool">
+        <div class="language-bar">
+          <button id="source-language" class="language active" type="button" aria-label="Source language">English</button>
+          <button id="swap" class="swap" type="button" aria-label="Swap languages" title="Swap languages">⇄</button>
+          <button id="target-language" class="language" type="button" aria-label="Target language">Korean</button>
+        </div>
+
+        <div class="panes">
+          <div class="pane">
+            <label for="source-text">English text</label>
+            <textarea id="source-text" maxlength="500" placeholder="Enter text to translate..." autofocus></textarea>
+            <div class="pane-footer">
+              <span id="char-count" aria-live="polite">0 / 500</span>
+            </div>
+          </div>
+
+          <div class="pane output-pane">
+            <label for="translated-text">Korean translation</label>
+            <textarea id="translated-text" placeholder="Translation appears here" readonly></textarea>
+            <div class="pane-footer">
+              <span id="status" role="status"></span>
+              <button id="copy" class="copy" type="button" disabled>
+                <span aria-hidden="true">⧉</span> Copy
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button id="translate" class="translate" type="button">Translate</button>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
